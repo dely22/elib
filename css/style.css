@@ -71,7 +71,9 @@ section {
 
 .lose .logo {
     padding: 1rem;
-    margin-left: 20rem;
+    position: relative;
+    /* margin-left: 20rem; */
+    float: right;
     width: 10rem;
     height: 10rem;
 
@@ -159,6 +161,15 @@ section {
     width: 90%;
     border-bottom: .1rem solid #666;
 }
+.footer .box-container .box h4 {
+margin-top: 3.5rem;
+font-size: 1.5rem;
+color: var(--gray);
+padding: 1rem 0;
+padding-inline-start:.7rem ;
+width: 90%;
+border-bottom: .1rem solid #666;
+}
 
 .footer .box-container .box a {
     display: block;
@@ -214,15 +225,63 @@ section {
 .footer .box-container .box form label{
     font-size: 1.5rem;
     position: relative;
-    bottom: 5rem;
-    right: 25rem;
+    bottom: 4rem;
+    right: 8rem;
     z-index: 10;
     color: var(--main-color);
-    display: inline-block;
+    display: relative;
+    float: left;
     cursor: pointer;
 }
 .footer .box-container .box form .btn {
    position: relative;
-   right:17rem;
+   /* right:17rem; */
+   float: left;
 
 }
+.footer .box-container .box .share {
+    padding-top: 1rem;
+    display: flex;
+    
+  }
+  
+  .footer .box-container .box .share a {
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    /* border: 0.2rem solid #29d9d5; */
+    color: var(--white-color);
+    margin-right: .5rem;
+    text-align: center;
+  }
+  .footer .box-container .box .share a:first-child{
+      background: #33f;
+  }
+  .footer .box-container .box .share a:nth-child(2){
+    background: rgb(51, 190, 255);
+}
+.footer .box-container .box .share a:nth-child(3){
+    background: #f33;
+}
+.footer .box-container .box .share a:nth-child(4){
+    background: rgb(207, 34, 207);
+}
+.footer .box-container .box .share a:nth-child(5){
+    background: rgb(96, 156, 190);
+}
+.footer .box-container .box .share a:nth-child(6){
+    background: rgb(194, 231, 28);
+}
+.footer .box-container .box .share a:nth-child(7){
+    background: rgb(32, 24, 24);
+}
+/*   
+  .footer .box-container .box .links {
+    font-size: 1.4rem;
+    color: #aaa;
+    padding: 1rem 0;
+    display: block;
+  } */
+  
