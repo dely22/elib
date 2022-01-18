@@ -26,9 +26,9 @@ html {
     
 }
 
-section {
+/* section {
     padding: 2rem 9%;
-}
+} */
 .btn {
     /* margin-top: 1rem; */
     /* display: block; */
@@ -38,6 +38,7 @@ section {
     cursor: pointer;
     background: var(--gray);
   }
+  /* header  */
 .header {
     position: fixed;
     top: 0;
@@ -65,18 +66,15 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    padding: 1.5rem 0;
+    padding-top: 1.5rem;
 }
 
 .lose .logo {
     padding: 1rem;
     position: relative;
-    /* margin-left: 20rem; */
     float: right;
     width: 10rem;
     height: 10rem;
-
 }
 
 .lose form {
@@ -97,7 +95,6 @@ section {
     color: var(--white-color);
     padding: 0 2rem;
     text-transform: none;
-
 }
 
 .lose form label{
@@ -140,6 +137,149 @@ section {
     border-right: none;
 }
 
+/* slider  */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .slider {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slides {
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+    /* scroll-behavior: smooth; */
+    overflow-y: hidden;
+  }
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    /* height: 400px; */
+    scroll-snap-align: center;
+    /* margin-right: 0px; */
+    box-sizing: border-box;
+    background: white;
+    transform-origin: center center;
+    transform: scale(1);
+  }
+
+  .slide__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide a {
+    background: none;
+    border: none;
+  }
+
+  a.slide__prev,
+  .slider::before {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 5%;
+  }
+
+  a.slide__next,
+  .slider::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 5%;
+  }
+
+  .slider::before,
+  .slider::after,
+  .slide__prev,
+  .slide__next {
+    position: absolute;
+    top: 48%;
+    width: 35px;
+    height: 35px;
+    border: solid rgb(32, 31, 31);
+    border-width: 0 4px 4px 0;
+    padding: 3px;
+    box-sizing: border-box;
+  }
+
+  .slider::before,
+  .slider::after {
+    content: "";
+    z-index: 1;
+    background: none;
+    pointer-events: none;
+  }
+
+  .slider__nav {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+  }
+
+  .slider__navlink {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 2px;
+    background-color: rgb(202, 195, 195);
+    margin: 0 1px 0 0px;
+  }
+  .slider__navlink:active {
+    background: white;
+  }
+  @keyframes slidy {
+    0% {
+      left: 0%;
+    }
+    20% {
+      left: 0%;
+    }
+    25% {
+      left: -100%;
+    }
+    45% {
+      left: -100%;
+    }
+    50% {
+      left: -200%;
+    }
+    70% {
+      left: -200%;
+    }
+    75% {
+      left: -300%;
+    }
+    95% {
+      left: -300%;
+    }
+    100% {
+      left: -400%;
+    }
+  }
+
+   .slide {
+    position: relative;
+    animation: 5s slidy infinite;
+  }
+  
 /* footer */
 .footer {
     background: var(--main-color);
@@ -162,13 +302,13 @@ section {
     border-bottom: .1rem solid #666;
 }
 .footer .box-container .box h4 {
-margin-top: 3.5rem;
-font-size: 1.5rem;
-color: var(--gray);
-padding: 1rem 0;
-padding-inline-start:.7rem ;
-width: 90%;
-border-bottom: .1rem solid #666;
+    margin-top: 3.5rem;
+    font-size: 1.5rem;
+    color: var(--gray);
+    padding: 1rem 0;
+    padding-inline-start:.7rem ;
+    width: 90%;
+    border-bottom: .1rem solid #666;
 }
 
 .footer .box-container .box a {
@@ -251,7 +391,6 @@ border-bottom: .1rem solid #666;
     line-height: 2rem;
     border-radius: 50%;
     font-size: 1.2rem;
-    /* border: 0.2rem solid #29d9d5; */
     color: var(--white-color);
     margin-right: .5rem;
     text-align: center;
@@ -277,11 +416,14 @@ border-bottom: .1rem solid #666;
 .footer .box-container .box .share a:nth-child(7){
     background: rgb(32, 24, 24);
 }
-/*   
-  .footer .box-container .box .links {
-    font-size: 1.4rem;
-    color: #aaa;
-    padding: 1rem 0;
-    display: block;
-  } */
-  
+@media (max-width:768px) {
+    .footer .credit {
+        display: flex;
+        flex-direction: column;
+    } 
+    .footer .credit .brands {
+        align-self: center;
+        justify-content: center;
+    }
+    
+}
