@@ -21,14 +21,14 @@
     <!-- header section starts  -->
     <header class="header">
       <nav class="navbar">
-        <a href="#" class="fas fa-user"> ادخل لحسابك أو سجل الآن</a>
-        <a href="#" class="fa-solid fa-star-sharp">الرئيسية</a>
-        <a href="#" class="fa-solid fa-truck-clock">من نحن</a>
-        <a href="#" class="fa-solid fa-shield-keyhole"> اتصل بنا</a>
-        <a href="#" class="fa-solid fa-circle-info"> المساعدة</a>
-        <a href="#" class="fa-solid fa-location-smile">سياسة الخصوصية</a>
-        <a href="#"> YER اليمن</a>
-        <a href="#" class="fa-solid fa-language">English</a>
+        <a href="#" onclick="document.getElementById('idlogin').style.display='block'"><img src="img/svg/svgexport-1.svg" class="nav_icon"> ادخل لحسابك أو سجل الآن</a>
+        <a href="#"><img src="img/svg/svgexport-2.svg" class="nav_icon">الرئيسية</a>
+        <a href="#"><img src="img/svg/svgexport-3.svg" class="nav_icon">من نحن</a>
+        <a href="#"><img src="img/svg/svgexport-4.svg" class="nav_icon">اتصل بنا</a>
+        <a href="#"><img src="img/svg/svgexport-5.svg" class="nav_icon"> المساعدة</a>
+        <a href="#"><img src="img/svg/svgexport-11.svg" class="nav_icon">سياسة الخصوصية</a>
+        <a href="#"><img src="img/svg/svgexport-12.svg" class="nav_icon">  اليمن YER </a>
+        <a href="#">English<img src="img/svg/svgexport-14.svg" class="nav_icon"></a>
       </nav>
       <div class="lose">
         <a href="#" class="logo"><img src="img/logo.PNG" alt="logo" /> </a>
@@ -43,6 +43,53 @@
       </div>
     </header>
     <!-- header section ends -->
+
+    <!-- Login Model -->
+    <section id="idlogin" class="modal">
+      <form class="modal-content animate" action=" " method="post">
+        <h2>تسجيل الدخول</h2>
+        <hr />
+        <div class="close-container">
+          <span
+            onclick="document.getElementById('idlogin').style.display='none'"
+            class="close"
+            title=" أغلق الفورم"
+            >&times;</span>
+        </div>
+
+        <div class="container">
+          <input
+            type="text"
+            placeholder=" البريد الاكتروني أو رقم الجوال"
+            name="uname"
+            required/>
+
+          <div style="display: inline">
+            <input
+              type="password"
+              placeholder="كلمة السر"
+              name="psw"
+              required/>
+            <span class="psw"> <a href="#">نسيت؟</a></span>
+          </div>
+          <button type="submit">تسجيل الدخول</button>
+        </div>
+        <div class="container-boto">
+          <label> ليس لديك حساب؟ </label>
+          <button
+            type="button"
+            onclick="document.getElementById('idlogin').style.display='none'"
+            class="singation">
+            انشاء حساب جديد
+          </button>
+        </div>
+      </form>
+    </section>
+<!-- End LogIn -->
+
+
+
+
     <!-- slider start -->
       <div class="slider-container">
         <div class="slider">
@@ -141,8 +188,6 @@
               <a href="#" class="fa-brands fa-snapchat"></a>
               <a href="#" class="fa-brands fa-tiktok"></a>
             </div>
-            <!-- <i class="fa-solid fa-lock"></i> -->
-            <!-- <img src="imag/payment.png" alt="" /> -->
           </div>
         </div>
 
@@ -198,7 +243,8 @@
         </div>
       </div>
     </footer>
-
     <!-- footer section ends -->
+
+    <script src="js/app.js"></script>
   </body>
 </html>
