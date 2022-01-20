@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style>
+      .shope {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+      }
+      .boxrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .box {
+        display: flex;
+        flex-direction: row;
+        padding: 22px;
+        background: chartreuse;
+        gap: 1rem;
+      }
+      .box .col {
+        display: flex;
+        flex-direction: row;
+        background: rgb(64, 75, 53);
+      }
+      .conto {
+        display: flex;
+        flex-direction: row;
+        background: rgb(44, 4, 19);
+      }
+      .colo {
+        display: flex;
+        flex-direction: column;
+        background: rgb(43, 7, 100);
+      }
+      button {
+        margin: 0.2px;
+        width: 10px;
+        text-align: center;
+        height: 5px;
+      }
+      .btns {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+      }h3{
+          font-size: 1.5rem;
+          float: right;
+      }
+      .heder{
+          display: flex;
+          justify-content: start;
+      }
+      p{
+          background: rosybrown;
+          padding: 2px;
+          font-size: 1.5rem;
+          border-start:2px solid var(rgb(180, 178, 30))  ;
+      }
+      .tp-border{
+          border-top:1px solid gray ;
+          padding: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="shope">
+        <div class="heder">
+      <h3><a href="#" class="fas fa-shopping-cart nav_icon"></a> السلة  <sub>(3منتجات )</sub></h3></div>
+     
+      <div class="boxrow">
+        <div class="box">
+          <img src="img/logo.PNG" alt="" />
+          <div col>
+            <h3>البداية والنهاية الجز الأول (كتاب الكتروني)</h3>
+            <span>منتج قابل للخصم لحاملي بطاقة مكتبة جرير</span>
+            <p>
+              <span>ملاحظة:</span>
+              هذا المنتج رقمي وسيتم توصيلة من خلال البريد الاكتروني
+              <a href="#" كيفية الحصول على المنتج؟></a>
+            </p>
+          </div>
+          <!--  السهر  -->
+          <!-- <div class="colo">
+            <div class="price">
+              <p>3.99<span>رس</span></p>
+            </div>
+            <div class="conto">
+              <span>1</span>
+              <div class="btns">
+                <button>+</button>
+                <button>-</button>
+              </div>
+            </div>
+          </div>
+           -->
+        
+        </div>
+        <hr />
+          <p class="fa-solid fa-circle-xmark tp-border">احذف</p>
+      </div>
+      <div class="boxcol"></div>
+    </section>
+  </body>
+</html>
