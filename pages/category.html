@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-librarri</title>
     <!-- font awesome cdn link  -->
@@ -16,6 +18,7 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/hom.css" />
   </head>
   <body>
     <!-- header section starts  -->
@@ -52,17 +55,32 @@
       </nav>
       <div class="lose">
         <a href="#" class="logo"><img src="../img/logo.PNG" alt="logo" /> </a>
+
         <form action="">
-          <input type="search" id="search-bar" placeholder="البحث" />
+
+          <input type="search" id="searchbar" placeholder="البحث" onkeyup="search_book()" />
           <label for="search-bar" class="fas fa-search"></label>
           <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
         </form>
-        <div class="icons">
-          <a href="#" class="fas fa-shopping-cart"></a>
-        </div>
+
+        <!-- <div class="icons">
+          <button type="button" class="icon-button">
+            <span  class="fas fa-shopping-cart"></span>
+            <span class="icon-button__badge">0</span>
+          </button>
+          <!-- <a href="#" class="fas fa-shopping-cart"></a> -->
+        <!-- </div> --> -->
+        <div class="icons" id="group">
+          <button type="button" class="icon-button">
+            <span  class="fas fa-shopping-cart"></span>
+            <span class="badge icon-button__badge">0</span>
+            <!-- icon noto end -->
+          </div>
+
       </div>
     </header>
     <!-- header section ends -->
+    
     <main class="main">
       <!-- Login Model -->
       <section id="idlogin" class="modal">
@@ -230,6 +248,376 @@
         </div>
       </section>
       <!-- slider end -->
+
+       <!--   current-offers   -->
+  <!--   cooking books   -->
+  <div class="current-offers ">
+    <div class="head">
+    </div>
+
+    <div class="offers list">
+      <img src="../img/svg/rightArrow.svg" alt="" class="navgo"/>
+      <!-- ------ offer 1 ------ -->
+      <div class="offer seritem">
+        <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+        <img src="../img/books/beYou.jpg" alt="" />
+        <div class="type">
+          <img src="../img/svg/bookRed.svg" alt="" />
+          <span>كتاب الإلكتروني</span>
+        </div>
+        <p class="title">كن انت (كتاب الكتروني)</p>
+
+        <div class="price">
+          <p>17.99</p>
+          <p>ر.س</p>
+        </div>
+        <p class="other"></p>
+
+        <div class="options" id="group">
+          <img src="../img/svg/star.svg" alt="" />
+          <img src="../img/svg/cartRed.svg" class="shop success" />
+          <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+        </div>
+          
+      </div>
+
+      <!-- ------ offer 2 ------ -->
+      <div class="offer">
+        <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+        <img src="../img/books/fullSelfTrust.jpg" alt="" />
+        <div class="type">
+          <img src="../img/svg/bookRed.svg" alt="" />
+          <span>كتاب الإلكتروني</span>
+        </div>
+        <p class="title">الثقة التامة بالنفس (كتاب الكتروني)</p>
+        <div class="price">
+          <p>17.99</p>
+          <p>ر.س</p>
+        </div>
+        <p class="other"></p>
+        <div class="options" id="group">
+          <img src="../img/svg/star.svg" alt="" />
+          <img src="../img/svg/cartRed.svg" class="shop success" />
+          <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+        </div>
+         
+      </div>
+
+      <!-- ------ offer 3 ------ -->
+      <div class="offer seritem">
+        <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+        <img src="../img/books/karmaDiagnosis.jpg" alt="" />
+
+        <div class="type">
+          <img src="../img/svg/bookRed.svg" alt="" />
+          <span>كتاب الإلكتروني</span>
+        </div>
+
+        <p class="title">تشخيص الكارما (كتاب الكتروني)</p>
+
+        <div class="price">
+          <p>17.99</p>
+          <p>ر.س</p>
+        </div>
+
+        <p class="other"></p>
+
+        <div class="options" id="group">
+          <img src="../img/svg/star.svg" alt="" />
+          <img src="../img/svg/cartRed.svg" class="shop success" />
+          <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+        </div>
+        
+      </div>
+
+      <!-- ------ offer 4 ------ -->
+      <div class="offer">
+        <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+        <img src="../img/books/realConfidence.jpg" alt="" />
+
+        <div class="type">
+          <img src="../img/svg/bookRed.svg" alt="" />
+          <span>كتاب الإلكتروني</span>
+        </div>
+
+        <p class="title">الثقة الحقيقية (كتاب الكتروني)</p>
+
+        <div class="price">
+          <p>17.99</p>
+          <p>ر.س</p>
+        </div>
+
+        <p class="other"></p>
+
+        <div class="options" id="group">
+          <img src="../img/svg/star.svg" alt="" />
+          <img src="../img/svg/cartRed.svg" class="shop success" />
+          <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+        </div>
+        
+      </div>
+
+      <!-- ------ offer 5 ------ -->
+      <div class="offer seritem">
+        <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+        <img src="../img/books/yourNewSelf.jpg" alt="" />
+
+        <div class="type">
+          <img src="../img/svg/bookRed.svg" alt="" />
+          <span>كتاب الإلكتروني</span>
+        </div>
+
+        <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+        <div class="price">
+          <p>17.99</p>
+          <p>ر.س</p>
+        </div>
+
+        <p class="other"></p>
+        <div class="options">
+          <img src="../img/svg/star.svg" alt="" />
+          <img src="../img/svg/cartRed.svg" alt="" />
+          <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+        </div>
+        <div class="counter-container">
+          <div id="days5"></div>
+          :&nbsp;&nbsp;
+          <div id="hours5"></div>
+          :&nbsp;&nbsp;
+          <div id="minutes5"></div>
+          :&nbsp;&nbsp;
+          <div id="seconds5"></div>
+        </div>
+      </div>
+
+  <!-- ------ offer 5 ------ -->
+  <div class="offer seritem">
+    <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+    <img src="../img/books/yourNewSelf.jpg" alt="" />
+
+    <div class="type">
+      <img src="../img/svg/bookRed.svg" alt="" />
+      <span>كتاب الإلكتروني</span>
+    </div>
+
+    <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+    <div class="price">
+      <p>17.99</p>
+      <p>ر.س</p>
+    </div>
+
+    <p class="other"></p>
+    <div class="options" id="group">
+      <img src="../img/svg/star.svg" alt="" />
+      <img src="../img/svg/cartRed.svg" class="shop success" />
+      <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+    </div>
+    
+  </div>
+    <!-- ------ offer 5 ------ -->
+    <div class="offer seritem">
+      <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+      <img src="../img/books/yourNewSelf.jpg" alt="" />
+
+      <div class="type">
+        <img src="../img/svg/bookRed.svg" alt="" />
+        <span>كتاب الإلكتروني</span>
+      </div>
+
+      <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+      <div class="price">
+        <p>17.99</p>
+        <p>ر.س</p>
+      </div>
+
+      <p class="other"></p>
+      <div class="options">
+        <img src="../img/svg/star.svg" alt="" />
+        <img src="../img/svg/cartRed.svg" alt="" />
+        <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+      </div>
+      <div class="counter-container">
+        <div id="days5"></div>
+        :&nbsp;&nbsp;
+        <div id="hours5"></div>
+        :&nbsp;&nbsp;
+        <div id="minutes5"></div>
+        :&nbsp;&nbsp;
+        <div id="seconds5"></div>
+      </div>
+    </div>
+      <!-- ------ offer 5 ------ -->
+      <div class="offer seritem">
+        <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+        <img src="../img/books/yourNewSelf.jpg" alt="" />
+
+        <div class="type">
+          <img src="../img/svg/bookRed.svg" alt="" />
+          <span>كتاب الإلكتروني</span>
+        </div>
+
+        <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+        <div class="price">
+          <p>17.99</p>
+          <p>ر.س</p>
+        </div>
+
+        <p class="other"></p>
+        <div class="options">
+          <img src="../img/svg/star.svg" alt="" />
+          <img src="../img/svg/cartRed.svg" alt="" />
+          <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+        </div>
+        <div class="counter-container">
+          <div id="days5"></div>
+          :&nbsp;&nbsp;
+          <div id="hours5"></div>
+          :&nbsp;&nbsp;
+          <div id="minutes5"></div>
+          :&nbsp;&nbsp;
+          <div id="seconds5"></div>
+        </div>
+      </div>
+        <!-- ------ offer 5 ------ -->
+        <div class="offer seritem">
+          <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+          <img src="../img/books/yourNewSelf.jpg" alt="" />
+  
+          <div class="type">
+            <img src="../img/svg/bookRed.svg" alt="" />
+            <span>كتاب الإلكتروني</span>
+          </div>
+  
+          <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+  
+          <div class="price">
+            <p>17.99</p>
+            <p>ر.س</p>
+          </div>
+  
+          <p class="other"></p>
+          <div class="options">
+            <img src="../img/svg/star.svg" alt="" />
+            <img src="../img/svg/cartRed.svg" alt="" />
+            <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+          </div>
+          <div class="counter-container">
+            <div id="days5"></div>
+            :&nbsp;&nbsp;
+            <div id="hours5"></div>
+            :&nbsp;&nbsp;
+            <div id="minutes5"></div>
+            :&nbsp;&nbsp;
+            <div id="seconds5"></div>
+          </div>
+        </div>
+          <!-- ------ offer 5 ------ -->
+      <div class="offer seritem">
+        <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+        <img src="../img/books/yourNewSelf.jpg" alt="" />
+
+        <div class="type">
+          <img src="../img/svg/bookRed.svg" alt="" />
+          <span>كتاب الإلكتروني</span>
+        </div>
+
+        <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+        <div class="price">
+          <p>17.99</p>
+          <p>ر.س</p>
+        </div>
+
+        <p class="other"></p>
+        <div class="options">
+          <img src="../img/svg/star.svg" alt="" />
+          <img src="../img/svg/cartRed.svg" alt="" />
+          <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+        </div>
+        <div class="counter-container">
+          <div id="days5"></div>
+          :&nbsp;&nbsp;
+          <div id="hours5"></div>
+          :&nbsp;&nbsp;
+          <div id="minutes5"></div>
+          :&nbsp;&nbsp;
+          <div id="seconds5"></div>
+        </div>
+      </div>
+        <!-- ------ offer 5 ------ -->
+        <div class="offer seritem">
+          <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+          <img src="../img/books/yourNewSelf.jpg" alt="" />
+  
+          <div class="type">
+            <img src="../img/svg/bookRed.svg" alt="" />
+            <span>كتاب الإلكتروني</span>
+          </div>
+  
+          <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+  
+          <div class="price">
+            <p>17.99</p>
+            <p>ر.س</p>
+          </div>
+  
+          <p class="other"></p>
+          <div class="options">
+            <img src="../img/svg/star.svg" alt="" />
+            <img src="../img/svg/cartRed.svg" alt="" />
+            <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+          </div>
+        
+        </div>
+          <!-- ------ offer 5 ------ -->
+      <div class="offer seritem">
+        <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+        <img src="../img/books/yourNewSelf.jpg" alt="" />
+
+        <div class="type">
+          <img src="../img/svg/bookRed.svg" alt="" />
+          <span>كتاب الإلكتروني</span>
+        </div>
+
+        <p class="title">ذاتك الجديدة (كتاب الكتروني)</p>
+
+        <div class="price">
+          <p>17.99</p>
+          <p>ر.س</p>
+        </div>
+
+        <p class="other"></p>
+        <div class="options">
+          <img src="../img/svg/star.svg" alt="" />
+          <img src="../img/svg/cartRed.svg" alt="" />
+          <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
+        </div>
+        <div class="counter-container">
+          <div id="days5"></div>
+          :&nbsp;&nbsp;
+          <div id="hours5"></div>
+          :&nbsp;&nbsp;
+          <div id="minutes5"></div>
+          :&nbsp;&nbsp;
+          <div id="seconds5"></div>
+        </div>
+      </div>
+      
+
+      <img
+      src="../img/svg/rightArrow.svg"
+      style="transform: rotateY(180deg)"
+      alt="" class="navgo"/>
+    </div>
+   
+  </div>
+
+
+
     </main>
     <!-- footer section starts  -->
     <footer class="footer">

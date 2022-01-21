@@ -170,3 +170,28 @@ const countdown5=()=>{
     s.innerHTML=remain_second;
 }
 setInterval(countdown5,1000);
+// filter
+// count from '#group' container.
+$(document).ready(function() {
+  $(".shop").click(function() {
+    var val = parseInt($('#group').find('.badge').text());
+           ($(this).hasClass('success')) {
+      $('#group').find('.badge').text(val + 1);
+        }
+  });
+});
+// search
+function search_book() {
+	let input = document.getElementById('searchbar').value
+	input=input.toLowerCase();
+	let x = document.getElementsByClassName('seritem');
+	
+	for (i = 0; i < x.length; i++) {
+		if (!x[i].innerHTML.toLowerCase().includes(input)) {
+			x[i].style.display="none";
+		}
+		else {
+			x[i].style.display="flex";				
+		}
+	}
+}
