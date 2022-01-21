@@ -175,7 +175,7 @@ setInterval(countdown5,1000);
 $(document).ready(function() {
   $(".shop").click(function() {
     var val = parseInt($('#group').find('.badge').text());
-           ($(this).hasClass('success')) {
+           if($(this).hasClass('success')) {
       $('#group').find('.badge').text(val + 1);
         }
   });
@@ -191,7 +191,7 @@ function search_book() {
 			x[i].style.display="none";
 		}
 		else {
-			x[i].style.display="flex";				
+			x[i].style.display="list-item"; 				
 		}
 	}
 }
