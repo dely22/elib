@@ -10,17 +10,6 @@
   --sinput:#e5e9f4;
   --valsing:#eff2f7;
   --blue:#0053ca;
-
-  --color-alt: hsl(var(--hue-color), 69%, 16%);
-  --color-lighter: hsl(var(--hue-color), 3%, 90%);
-  --title-color: hsl(var(--hue-color), 0%, 4%);
-  --text-color: hsl(var(--hue-color), 5%, 100%);
-  --text-color-light: hsl(var(--hue-color), 2%, 60%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
-  --container-color: #fff;
-  --body-font: 'Tajawal', sans-serif;
-  --log_font: 'Mea Culpa', cursive;
 }
 
 * {
@@ -40,7 +29,8 @@
 
 
 html {
-  font-size: 62.5%;
+  font-size: 70.5%;
+  /* font-size: 62.5%; */
   overflow-x: hidden;
   scroll-padding-top: 7rem;
   scroll-behavior: smooth;
@@ -382,8 +372,8 @@ body {
 
 /* LogIn style */
 /* Full-width input fields */
-input[type="text"],
-input[type="password"] {
+.login input[type="text"],
+.login input[type="password"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -394,16 +384,20 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-hr {
+.login hr , .singup hr{
   color: #ccc;
   background: #ccc;
-  width: 98%;
+  width: 100%;
 }
-h2{
+.login h2, .singup h2{
   text-align: center;
+  padding: 1rem;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin: 1rem;
 }
 /* Set a style for all buttons */
-button {
+.login button {
   background-color: var(--red);
   color: white;
   padding: 14px 20px;
@@ -415,12 +409,12 @@ button {
   font-size: 1.6rem;
 }
 
-button:hover {
+.login button:hover {
   opacity: 0.8;
 }
 
 /* Extra styles for the create button */
-.singation {
+.login .singation {
   width: 15rem;
   padding: 10px 18px;
   background-color: none;
@@ -530,11 +524,12 @@ button:hover {
 
 /* slide */
 
-.slider-container {
+/* .slider-container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  
   
 } 
 
@@ -583,7 +578,7 @@ button:hover {
  }
 
   100%  {  transform: translateX(5600px);
- }
+ } */
  /* 0%{
 margin-left: -10%;
  }
@@ -599,8 +594,8 @@ margin-left: -10%;
 100%{
   margin-left: -200%;
 } */
-}
-.slide__text {
+/* } */
+/* .slide__text {
   font-size: 40px;
   font-weight: bold;
   justify-content: center;
@@ -668,7 +663,7 @@ a.slide__next,a.slide__next2,
   border-radius: 50%;
   background-color: black;
   margin: 0 10px 0 10px;
-}
+} */
 /* counter offer */
 .counter-container {
   display: flex;
@@ -868,7 +863,8 @@ background-color: rgb(75, 191, 245);
   .lose form {
     width: 25rem;
   }
-  .slider-container{margin-top: 43rem;}
+  .slideshow-container{
+    margin-top: 3rem;}
   .slider__nav{
     bottom: 0;
   }

@@ -187,7 +187,12 @@
   } 
   }
   @media (max-width:991px) {
-    .galary  img{
+    .galary .box{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .galary img,.galary .box img {
       width: 100%;
     }
     .offers,   .typ-container{
@@ -195,6 +200,8 @@
       flex-direction: column;
       align-items: center;
     }
+    
+    
   
   
   }

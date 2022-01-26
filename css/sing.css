@@ -1,17 +1,4 @@
-/* .sing {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    width: 43%;
-    margin: auto;
-    transform: translateY(15%);
-    background-color: white;
-    border-radius: 5px;
-    padding-bottom: 20px;
-    
-  } */
-.sing > button {
+/* .sing > button {
     width: 25px;
     height: 25px;
     background-color: #d4050c5e;
@@ -31,23 +18,23 @@
   }
   .sing img {
     max-width: 100%;
-  }
+  } */
 
-  h2 {
+  /* h2 {
     margin-top: 0;
     box-shadow: 0px 12px 3px -13px black;
     padding: 20px;
-  }
+  } */
 
   /* Chrome, Safari, Edge, Opera */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
+  .singup input::-webkit-outer-spin-button,
+  .singup input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
 
   /* Firefox */
-  input[type="number"] {
+  .singup  input[type="number"] {
     -moz-appearance: textfield;
   }
   #countryCode {
@@ -58,7 +45,7 @@
     width: 27%;
     margin-bottom: 5px;
   }
-  .phone-number {
+  .singup .phone-number {
     width: 77%;
     display: flex;
     justify-content: space-between;
@@ -66,16 +53,16 @@
   #phone {
     width: 65%;
   }
-  form {
+  .singup form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-top: 17px;
   }
-  input[type="number"],
-  input[type="text"],
-  input[type="email"] {
+  .singup  input[type="number"],
+  .singup  input[type="text"],
+  .singup input[type="email"] {
     background-color: #eff2f7;
     border: none;
     margin-bottom: 5px;
@@ -84,15 +71,15 @@
     border-radius: 3px;
     font-size: 1rem;
   }
-  input[type="text"]:focus-visible,
-  input[type="number"]:focus-visible,
-  input[type="email"] {
+  .singup  input[type="text"]:focus-visible,
+  .singup input[type="number"]:focus-visible,
+  .singup input[type="email"] {
     outline: none;
   }
-  .password {
+  .singup .password {
     position: relative;
   }
-  .forgot {
+  .singup .forgot {
     text-decoration: none;
     color: #3e65a2;
     font-weight: bold;
@@ -100,38 +87,40 @@
     top: 8px;
     left: 10px;
   }
-  input[type="text"]::placeholder,
-  input[type="email"]::placeholder {
+  .singup input[type="text"]::placeholder,
+  .singup input[type="email"]::placeholder {
     position: absolute;
     top: 0px;
     right: 3px;
     font-family: "Tajawal", sans-serif;
     font-size: 0.7rem;
   }
-  input[type="number"]::placeholder {
+  .singup input[type="number"]::placeholder {
     font-family: "Tajawal", sans-serif;
   }
-  label {
+  .singup label {
     display: inline-block;
     font-size: 0.8rem;
     color: #b5babc;
   }
-  .check {
+  .singup .check {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 76%;
     margin-top: 3px;
     /* margin-bottom: 5px; */
+  }.singup .check a{
+    color: var(--blue);
   }
-  input[type="checkbox"] {
+  .singup input[type="checkbox"] {
     width: 22px;
     height: 22px;
   }
-  input[type="submit"] {
+  .singup input[type="submit"] {
     margin-top: 7px;
   }
-  .btn {
+  .singup .btn {
     padding: 10px 50px;
     background: #e5e9f4;
     border: none;
@@ -144,7 +133,7 @@
     margin-bottom: 10px;
   }
 
-  p {
+  .singup p {
     font-size: 0.7rem;
     color: #b5babc;
     width: 100%;
@@ -153,7 +142,7 @@
     margin: 0 0 5px;
   }
 
-  .log {
+  .singup .log {
     position: fixed;
     top: 0;
     left: 0;
@@ -166,14 +155,14 @@
     position: absolute;
     z-index: 111;
   }
-  .hide {
+  .singup .hide {
     display: none;
   }
-  p.sing {
+  .singup p.sing {
     font-size: 0.9rem;
     margin: auto;
   }
-  p.sing img {
+  .singup p.sing img {
     width: 11px;
     position: relative;
     top: 2px;

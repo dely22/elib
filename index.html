@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -19,6 +20,7 @@
     <link rel="stylesheet" href="css/hom.css" />
     <link rel="stylesheet" href="css/sing.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/slide.css" />
     <!-- <link rel="stylesheet" href="slider.css" /> -->
   </head>
   <body>
@@ -54,6 +56,9 @@
           >English<img src="img/svg/svgexport-14.svg" class="nav_icon"
         /></a>
       </nav>
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
       <div class="lose">
         <a href="#" class="logo"><img src="img/logo.PNG" alt="logo" /> </a>
         <form action="">
@@ -69,17 +74,14 @@
     <!-- header section ends -->
     <main class="main">
       <!-- Login Model -->
-      <section id="idlogin" class="modal">
+      <section id="idlogin" class="login modal">
         <form class="modal-content animate" action=" " method="post">
           <h2>تسجيل الدخول</h2>
           <hr />
           <div class="close-container">
             <span
               onclick="document.getElementById('idlogin').style.display='none'"
-              class="close"
-              title=" أغلق الفورم"
-              >&times;</span
-            >
+              class="close" title=" أغلق الفورم">&times;</span>
           </div>
 
           <div class="container">
@@ -106,7 +108,7 @@
             <button
               type="button" id="sing" class="singation"
               onclick="document.getElementById('idlogin').style.display='none';
-              document.getElementById('show-singUp').style.display='block';" >
+              document.getElementById('idsing').style.display='block';" >
               انشاء حساب جديد
             </button>
           </div>
@@ -115,80 +117,26 @@
       <!-- End LogIn -->
 
       <!-- singUp Model -->
-      <!-- <section> -->
-        <section id="idsing" class="modal">
-          <span
-            onclick="document.getElementById('idsing').style.display='none'"
-            class="close3"
-            title="Close Modal"> &times;</span
-          >
+      <section id="idsing" class="singup modal">
+        <form action="" class="modal-content animate">
           <h2>إنشاء حساب</h2>
-
-      <form action="">
-        <div class="phone-number">
-          <input type="number" name="" placeholder="رقم الجوال" id="phone" />
-          <select name="countryCode" id="countryCode">
-            <option data- value="+970">+970</option>
-            <option style="background-image: url(imgs/svg/country.svg)">
-              +970
-            </option>
-          </select>
-        </div>
-        <p>سوف نرسل لك <strong>رمز التحقق عن طريق رسالة نصية</strong></p>
-
-        <button class="btn">إرسال رمز التحقق</button>
-        <input type="text" name="" placeholder="الإسم الأول" id="" />
-        <input type="text" name="" placeholder="أسم العائلة" id="" />
-        <input type="email" name="" placeholder="البريد الإلكتروني" id="" />
-        <input
-          type="email"
-          name=""
-          placeholder="تأكيد البريد الإلكتروني"
-          id=""
-        />
-        <input type="text" name="" placeholder="كلمة المرور" id="" />
-
-        <div class="check">
-          <input type="checkbox" name="agree" id="" />
-          <label for="agree">أوافق علي <a href="">الشروط والاحكام</a></label>
-        </div>
-        <div class="check">
-          <input type="checkbox" name="email-post-signIn" id="" />
-          <label for="agree">التسجيل للإنضمام للنشرة الإخبارية</label>
-        </div>
-        <input type="submit" class="btn" value="إنشاء حساب" />
-     
-              <button class="sign_btn3">إنشاء حساب</button>
-              <div class="container2">
-                <p>
-                  لديك حساب؟
-                  <a  style="color: blue; cursor: pointer;" onclick="document.getElementById('idlog').style.display='block'" >تسجيل الدخول<img src="img/svg/svgexport-17.svg"> </a>
-                  <span onclick="document.getElementById('idsing').style.display='none'";
-                    style="color: blue; cursor: pointer"
-                    >تسجيل الدخول<img src="img/svg/svgexport-17.svg"
-                  /></span>
-                </p>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
-      <!-- <section  id="show-singUp" class="sing modal">
-        <button><img src="imgs/svg/cancel.svg" alt="" /></button>
-        <h2>إنشاء حساب</h2>
-  
-        <form action="">
+          <hr>
+          <div class="close-container">
+            <span
+              onclick="document.getElementById('idsing').style.display='none'"
+              class="close" title=" أغلق الفورم">&times;</span>
+          </div>
           <div class="phone-number">
             <input type="number" name="" placeholder="رقم الجوال" id="phone" />
             <select name="countryCode" id="countryCode">
               <option data- value="+970">+970</option>
-              <option style="background-image: url(imgs/svg/country.svg)">
+              <option style="background-image: url(img/svg/country.svg)">
                 +970
               </option>
             </select>
           </div>
           <p>سوف نرسل لك <strong>رمز التحقق عن طريق رسالة نصية</strong></p>
-  
+
           <button class="btn">إرسال رمز التحقق</button>
           <input type="text" name="" placeholder="الإسم الأول" id="" />
           <input type="text" name="" placeholder="أسم العائلة" id="" />
@@ -200,65 +148,84 @@
             id=""
           />
           <input type="text" name="" placeholder="كلمة المرور" id="" />
-  
+
           <div class="check">
-            <input type="checkbox" name="agree" id="" />
+            <input type="checkbox" name="agree" id="" checked/>
             <label for="agree">أوافق علي <a href="">الشروط والاحكام</a></label>
           </div>
           <div class="check">
-            <input type="checkbox" name="email-post-signIn" id="" />
+            <input type="checkbox" name="email-post-signIn" id="" checked/>
             <label for="agree">التسجيل للإنضمام للنشرة الإخبارية</label>
           </div>
-          <input type="submit" class="btn" value="إنشاء حساب" />
+            <input type="submit" class="btn" value="إنشاء حساب" />
+      
+                <button class="sign_btn3">إنشاء حساب</button>
+                <div class="container2">
+                  <p>
+                    لديك حساب؟
+                    <a  style="color: blue; cursor: pointer;" onclick="document.getElementById('idsing').style.display='none'; 
+                    document.getElementById('idlogin').style.display='block'" >
+                      تسجيل الدخول<img src="img/svg/svgexport-17.svg"> </a>
+                  
+                  </p>
+                </div>
+            
+            </div>
         </form>
-  
-        <p class="sing">
-          لديك حساب ؟
-          <a href="">
-            تسجيل الدخول <img src="imgs/svg/rightArrowBlue.svg" alt=""
-          /></a>
-        </p>
-       
-      </section> -->
+      </section>
       <!-- End singUp -->
       
       <!-- slider start -->
-      <section class="slider-container">
-        <div class="slider">
-          <div class="slides">
-            <div id="slides__1" class="slide">
-              <img src="img/slider_img.webp" />
-              <a class="slide__prev" href="#slides__4" title="Next"></a>
-              <a class="slide__next" href="#slides__2" title="Next"></a>
-            </div>
-            <div id="slides__2" class="slide">
-              <a class="slide__prev" href="#slides__1" title="Prev"></a>
-              <a class="slide__next" href="#slides__3" title="Next"></a>
-              <img src="img/slider_img2.webp" />
-            </div>
-            <div id="slides__3" class="slide">
-              <a class="slide__prev" href="#slides__2" title="Prev"></a>
-              <a class="slide__next" href="#slides__4" title="Next"></a>
-              <img src="img/slider_img3.jpg" />
-            </div>
-            <div id="slides__4" class="slide">
-              <a class="slide__prev" href="#slides__3" title="Prev"></a>
-              <a class="slide__next" href="#slides__1" title="Next"></a>
-              <img src="img/slider_img4.webp" />
-            </div>
-          </div>
-          <div class="slider__nav">
-            <a class="slider__navlink" href="#slides__1"></a>
-            <a class="slider__navlink" href="#slides__2"></a>
-            <a class="slider__navlink" href="#slides__3"></a>
-            <a class="slider__navlink" href="#slides__4"></a>
-          </div>
-        </div>
+      <section>
+        <div class="slideshow-container">
+
+                <div class="mySlides fade">
+              
+                  <img src="img/slider_img2.webp" style="width:100%">
+                  
+                </div>
+                
+                <div class="mySlides fade">
+          
+                  <img src="img/slider_img.webp" style="width:100%">
+                 
+                </div>
+                
+                <div class="mySlides fade">
+                
+                  <img src="img/slider_img3.jpg" style="width:100%">
+                 
+                </div>
+                
+                    <!-- <a class="prev" onclick="plusSlides_he(+1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides_he(1)">&#10095;</a> -->
+
+
+
+                    <div class="leftslid" onclick="plusSlides_he(+1)">
+                       
+                        &#10095;
+                      </div>
+                      <div class="rightslid" onclick="plusSlides_he(1)">
+                        &#10094;
+                         
+                      </div>
+
+
+               
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide_he(1)"></span> 
+                  <span class="dot" onclick="currentSlide_he(2)"></span> 
+                  <span class="dot" onclick="currentSlide_he(3)"></span> 
+                </div>
+                
       </section>
       <!-- slider end -->
 
-      <!-- silder2 -->
-   
+      
       <!-- home -->
         <section class="book-types">
           <h3 class="sec-title"> تصفح حسب القسم</h3>
@@ -317,11 +284,11 @@
             <a href="">عرض الكل</a>
           </div>
           <div class="offers">
-            <a href="pages/detailes.html">
-            <img src="img/svg/rightArrow.svg" alt="" class="navgo"/></a>
+            
+            <img src="img/svg/rightArrow.svg" alt="" class="navgo"/>
             <!-- ------ offer 1 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/beYou.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -340,6 +307,8 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
+              
+              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
               <div class="counter-container">
                D <div id="days"></div>
                 :&nbsp;&nbsp; 
@@ -354,7 +323,7 @@
   
             <!-- ------ offer 2 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/fullSelfTrust.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -371,6 +340,7 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
+              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
               <div class="counter-container">
                 D <div id="days2"></div>
                  :&nbsp;&nbsp; 
@@ -384,7 +354,7 @@
   
             <!-- ------ offer 3 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/karmaDiagnosis.jpg" alt="" />
   
               <div class="type">
@@ -406,6 +376,7 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
+              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
               <div class="counter-container">
                 <div id="days3"></div>
                 :&nbsp;&nbsp;
@@ -419,7 +390,7 @@
   
             <!-- ------ offer 4 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/realConfidence.jpg" alt="" />
   
               <div class="type">
@@ -441,6 +412,7 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
+              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
               <div class="counter-container">
                 <div id="days4"></div>
                 :&nbsp;&nbsp;
@@ -454,7 +426,7 @@
   
             <!-- ------ offer 5 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/yourNewSelf.jpg" alt="" />
   
               <div class="type">
@@ -475,6 +447,7 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
+              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
               <div class="counter-container">
                 <div id="days5"></div>
                 :&nbsp;&nbsp;
@@ -504,7 +477,7 @@
             <img src="img/svg/rightArrow.svg" alt="" class="navgo"/>
             <!-- ------ offer 1 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/beYou.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -523,20 +496,11 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days"></div>
-                :&nbsp;&nbsp;
-                <div id="hours"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds"></div>
-              </div>
             </div>
   
             <!-- ------ offer 2 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/fullSelfTrust.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -558,7 +522,7 @@
   
             <!-- ------ offer 3 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/karmaDiagnosis.jpg" alt="" />
   
               <div class="type">
@@ -580,20 +544,11 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days3"></div>
-                :&nbsp;&nbsp;
-                <div id="hours3"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes3"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds3"></div>
-              </div>
             </div>
   
             <!-- ------ offer 4 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/realConfidence.jpg" alt="" />
   
               <div class="type">
@@ -615,20 +570,11 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days4"></div>
-                :&nbsp;&nbsp;
-                <div id="hours4"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes4"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds4"></div>
-              </div>
             </div>
   
             <!-- ------ offer 5 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/yourNewSelf.jpg" alt="" />
   
               <div class="type">
@@ -648,17 +594,7 @@
                 <img src="img/svg/star.svg" alt="" />
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
-              </div>
-              <div class="counter-container">
-                <div id="days5"></div>
-                :&nbsp;&nbsp;
-                <div id="hours5"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes5"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds5"></div>
-              </div>
-            </div>
+              </div>   </div>
             <img
             src="img/svg/rightArrow.svg"
             style="transform: rotateY(180deg)"
@@ -678,7 +614,7 @@
             <img src="img/svg/rightArrow.svg" alt="" class="navgo"/>
             <!-- ------ offer 1 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/beYou.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -697,20 +633,11 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days"></div>
-                :&nbsp;&nbsp;
-                <div id="hours"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds"></div>
-              </div>
             </div>
   
             <!-- ------ offer 2 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/fullSelfTrust.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -732,7 +659,7 @@
   
             <!-- ------ offer 3 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/karmaDiagnosis.jpg" alt="" />
   
               <div class="type">
@@ -754,20 +681,11 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days3"></div>
-                :&nbsp;&nbsp;
-                <div id="hours3"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes3"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds3"></div>
-              </div>
             </div>
   
             <!-- ------ offer 4 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/realConfidence.jpg" alt="" />
   
               <div class="type">
@@ -789,20 +707,11 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days4"></div>
-                :&nbsp;&nbsp;
-                <div id="hours4"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes4"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds4"></div>
-              </div>
             </div>
   
             <!-- ------ offer 5 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/yourNewSelf.jpg" alt="" />
   
               <div class="type">
@@ -822,15 +731,6 @@
                 <img src="img/svg/star.svg" alt="" />
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
-              </div>
-              <div class="counter-container">
-                <div id="days5">D</div>
-                :&nbsp;&nbsp;
-                <div id="hours5">H</div>
-                :&nbsp;&nbsp;
-                <div id="minutes5">M</div>
-                :&nbsp;&nbsp;
-                <div id="seconds5">S</div>
               </div>
             </div>
             <img
@@ -852,7 +752,7 @@
             <img src="img/svg/rightArrow.svg" alt="" class="navgo"/>
             <!-- ------ offer 1 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/beYou.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -871,20 +771,11 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days"></div>
-                :&nbsp;&nbsp;
-                <div id="hours"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds"></div>
-              </div>
             </div>
   
             <!-- ------ offer 2 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/fullSelfTrust.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -906,7 +797,7 @@
   
             <!-- ------ offer 3 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/karmaDiagnosis.jpg" alt="" />
   
               <div class="type">
@@ -928,20 +819,11 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days3"></div>
-                :&nbsp;&nbsp;
-                <div id="hours3"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes3"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds3"></div>
-              </div>
             </div>
   
             <!-- ------ offer 4 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/realConfidence.jpg" alt="" />
   
               <div class="type">
@@ -963,20 +845,11 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days4"></div>
-                :&nbsp;&nbsp;
-                <div id="hours4"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes4"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds4"></div>
-              </div>
             </div>
   
             <!-- ------ offer 5 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/yourNewSelf.jpg" alt="" />
   
               <div class="type">
@@ -997,15 +870,7 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days5"></div>
-                :&nbsp;&nbsp;
-                <div id="hours5"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes5"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds5"></div>
-              </div>
+             
             </div>
             <img
             src="img/svg/rightArrow.svg"
@@ -1027,7 +892,7 @@
             <img src="img/svg/rightArrow.svg" alt="" class="navgo"/>
             <!-- ------ offer 1 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/beYou.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -1046,20 +911,12 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days"></div>
-                :&nbsp;&nbsp;
-                <div id="hours"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds"></div>
-              </div>
+             
             </div>
   
             <!-- ------ offer 2 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/fullSelfTrust.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -1081,7 +938,7 @@
   
             <!-- ------ offer 3 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/karmaDiagnosis.jpg" alt="" />
   
               <div class="type">
@@ -1103,20 +960,12 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days3"></div>
-                :&nbsp;&nbsp;
-                <div id="hours3"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes3"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds3"></div>
-              </div>
+           
             </div>
   
             <!-- ------ offer 4 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/realConfidence.jpg" alt="" />
   
               <div class="type">
@@ -1138,20 +987,12 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days4"></div>
-                :&nbsp;&nbsp;
-                <div id="hours4"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes4"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds4"></div>
-              </div>
+             
             </div>
   
             <!-- ------ offer 5 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/yourNewSelf.jpg" alt="" />
   
               <div class="type">
@@ -1172,15 +1013,7 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days5"></div>
-                :&nbsp;&nbsp;
-                <div id="hours5"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes5"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds5"></div>
-              </div>
+              
             </div>
             <img
             src="img/svg/rightArrow.svg"
@@ -1201,7 +1034,7 @@
             <img src="img/svg/rightArrow.svg" alt="" class="navgo"/>
             <!-- ------ offer 1 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/beYou.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -1220,20 +1053,12 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days"></div>
-                :&nbsp;&nbsp;
-                <div id="hours"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds"></div>
-              </div>
+             
             </div>
   
             <!-- ------ offer 2 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/fullSelfTrust.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -1255,7 +1080,7 @@
   
             <!-- ------ offer 3 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/karmaDiagnosis.jpg" alt="" />
   
               <div class="type">
@@ -1277,20 +1102,12 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days3"></div>
-                :&nbsp;&nbsp;
-                <div id="hours3"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes3"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds3"></div>
-              </div>
+             
             </div>
   
             <!-- ------ offer 4 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/realConfidence.jpg" alt="" />
   
               <div class="type">
@@ -1312,20 +1129,12 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days4"></div>
-                :&nbsp;&nbsp;
-                <div id="hours4"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes4"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds4"></div>
-              </div>
+            
             </div>
   
             <!-- ------ offer 5 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/yourNewSelf.jpg" alt="" />
   
               <div class="type">
@@ -1346,15 +1155,7 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days5"></div>
-                :&nbsp;&nbsp;
-                <div id="hours5"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes5"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds5"></div>
-              </div>
+           
             </div>
             <img
             src="img/svg/rightArrow.svg"
@@ -1375,7 +1176,7 @@
             <img src="img/svg/rightArrow.svg" alt="" class="navgo"/>
             <!-- ------ offer 1 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/beYou.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -1394,20 +1195,12 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days"></div>
-                :&nbsp;&nbsp;
-                <div id="hours"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds"></div>
-              </div>
+              
             </div>
   
             <!-- ------ offer 2 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/fullSelfTrust.jpg" alt="" />
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
@@ -1429,7 +1222,7 @@
   
             <!-- ------ offer 3 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/karmaDiagnosis.jpg" alt="" />
   
               <div class="type">
@@ -1451,20 +1244,12 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days3"></div>
-                :&nbsp;&nbsp;
-                <div id="hours3"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes3"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds3"></div>
-              </div>
+             
             </div>
   
             <!-- ------ offer 4 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/realConfidence.jpg" alt="" />
   
               <div class="type">
@@ -1486,20 +1271,12 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days4"></div>
-                :&nbsp;&nbsp;
-                <div id="hours4"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes4"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds4"></div>
-              </div>
+             
             </div>
   
             <!-- ------ offer 5 ------ -->
             <div class="offer">
-              <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
+            <!-- -->
               <img src="img/books/yourNewSelf.jpg" alt="" />
   
               <div class="type">
@@ -1520,15 +1297,7 @@
                 <img src="img/svg/cartRed.svg" alt="" />
                 <img src="img/svg/inverseDirectionArrows.svg" alt="" />
               </div>
-              <div class="counter-container">
-                <div id="days5"></div>
-                :&nbsp;&nbsp;
-                <div id="hours5"></div>
-                :&nbsp;&nbsp;
-                <div id="minutes5"></div>
-                :&nbsp;&nbsp;
-                <div id="seconds5"></div>
-              </div>
+              
             </div>
             <img
             src="img/svg/rightArrow.svg"
@@ -1537,13 +1306,6 @@
           </div>
          
         </div>
-    
-  
-
-
-
-
-
     </main>
     <!-- footer section starts  -->
     <footer class="footer">
@@ -1650,5 +1412,6 @@
     <!-- footer section ends -->
 
     <script src="js/app.js"></script>
+    <script src="js/slid.js"></script>
   </body>
 </html>
