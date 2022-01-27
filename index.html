@@ -23,10 +23,10 @@
     <link rel="stylesheet" href="css/slide.css" />
     <!-- <link rel="stylesheet" href="slider.css" /> -->
   </head>
-  <body>
+  <body class="">
     <!-- header section starts  -->
     <header class="header">
-      <nav class="navbar">
+      <nav class="navbar" class="">
         <a
           href="#"
           onclick="document.getElementById('idlogin').style.display='block'"
@@ -52,7 +52,7 @@
         <a href="#"
           ><img src="img/svg/svgexport-12.svg" class="nav_icon" /> اليمن YER
         </a>
-        <a href="#"
+        <a href="#" id='switch_lang' onclick="switchrow"
           >English<img src="img/svg/svgexport-14.svg" class="nav_icon"
         /></a>
       </nav>
@@ -66,9 +66,13 @@
           <label for="search-bar" class="fas fa-search"></label>
           <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
         </form>
-        <div class="icons">
-          <a href="#" class="fas fa-shopping-cart"></a>
-        </div>
+        <div class="iconShopping" id="">
+          <button type="button" class="icon-button">
+            <a href="pages/checkout.html" class="fas fa-shopping-cart"></a>
+            <p id='cart-counter' class="icon-button__badge">0</p>
+            <!-- icon noto end -->
+          </div>
+       
       </div>
     </header>
     <!-- header section ends -->
@@ -281,7 +285,7 @@
         <div class="current-offers">
           <div class="head">
             <p>العروض الحالية</p>
-            <a href="">عرض الكل</a>
+            <a href="pages/category.html">عرض الكل</a>
           </div>
           <div class="offers">
             
@@ -289,7 +293,8 @@
             <!-- ------ offer 1 ------ -->
             <div class="offer">
             <!-- -->
-              <img src="img/books/beYou.jpg" alt="" />
+           <a href="pages/detailes.html"> 
+             <img src="img/books/beYou.jpg"/></a>  
               <div class="type">
                 <img src="img/svg/bookRed.svg" alt="" />
                 <span>كتاب الإلكتروني</span>
@@ -470,7 +475,7 @@
         <div class="current-offers">
           <div class="head">
             <p>الكتب الدينية</p>
-            <a href="">عرض الكل</a>
+            <a href="pages/category.html">عرض الكل</a>
           </div>
   
           <div class="offers">
@@ -607,7 +612,7 @@
         <div class="current-offers">
           <div class="head">
             <p>الكتب التاريخية</p>
-            <a href="">عرض الكل</a>
+            <a href="pages/category.html">عرض الكل</a>
           </div>
   
           <div class="offers">
@@ -745,7 +750,7 @@
         <div class="current-offers">
           <div class="head">
             <p>الكتب السياسية</p>
-            <a href="">عرض الكل</a>
+            <a href="pages/category.html">عرض الكل</a>
           </div>
   
           <div class="offers">
@@ -885,7 +890,7 @@
         <div class="current-offers">
           <div class="head">
             <p>الكتب اللإقتصادية</p>
-            <a href="">عرض الكل</a>
+            <a href="pages/category.html">عرض الكل</a>
           </div>
   
           <div class="offers">
@@ -1027,7 +1032,7 @@
         <div class="current-offers">
           <div class="head">
             <p>كتب الطبخ</p>
-            <a href="">عرض الكل</a>
+            <a href="pages/category.html">عرض الكل</a>
           </div>
   
           <div class="offers">
@@ -1169,7 +1174,7 @@
         <div class="current-offers">
           <div class="head">
             <p>أفضل الروايات الرومانسية</p>
-            <a href="">عرض الكل</a>
+            <a href="pages/category.html">عرض الكل</a>
           </div>
   
           <div class="offers">
@@ -1413,5 +1418,7 @@
 
     <script src="js/app.js"></script>
     <script src="js/slid.js"></script>
+    <script src="js/langSwitch.js"></script>
+    <script src="js/basket.js"></script>
   </body>
 </html>

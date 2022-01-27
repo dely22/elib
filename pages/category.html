@@ -21,17 +21,17 @@
     <link rel="stylesheet" href="../css/hom.css" />
     <link rel="stylesheet" href="../css/slide.css" />
   </head>
-  <body>
+  <body class="">
     <!-- header section starts  -->
-    <header class="header">
-      <nav class="navbar">
+    <header class="header" id="header">
+      <nav class="navbar" class="">
         <a
           href="#"
           onclick="document.getElementById('idlogin').style.display='block'"
           ><img src="../img/svg/svgexport-1.svg" class="nav_icon" /> ادخل لحسابك أو
           سجل الآن</a
         >
-        <a href="#"
+        <a href="../index.html"
           ><img src="../img/svg/svgexport-2.svg" class="nav_icon" />الرئيسية</a
         >
         <a href="#"
@@ -50,7 +50,7 @@
         <a href="#"
           ><img src="../img/svg/svgexport-12.svg" class="nav_icon" /> اليمن YER
         </a>
-        <a href="#"
+        <a href="#" id='switch_lang' onclick="switchrow"
           >English<img src="../img/svg/svgexport-14.svg" class="nav_icon"
         /></a>
       </nav>
@@ -58,24 +58,16 @@
         <a href="#" class="logo"><img src="../img/logo.PNG" alt="logo" /> </a>
 
         <form action="">
-
           <input type="search" id="searchbar" placeholder="البحث" onkeyup="search_book()" />
           <label for="search-bar" class="fas fa-search"></label>
           <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
         </form>
 
-        <!-- <div class="icons">
+        <div class="iconShopping" id="">
           <button type="button" class="icon-button">
-            <span  class="fas fa-shopping-cart"></span>
-            <span class="icon-button__badge">0</span>
-          </button>
-          <!-- <a href="#" class="fas fa-shopping-cart"></a> -->
-        <!-- </div> --> -->
-        <div class="icons" id="group">
-          <button type="button" class="icon-button">
-            <span  class="fas fa-shopping-cart"></span>
-            <span class="badge icon-button__badge">0</span>
-            <!-- icon noto end -->
+            <a href="checkout.html" class="fas fa-shopping-cart"></a>
+            <p id='cart-counter' class="icon-button__badge">0</p>
+           <!-- icon noto end -->
           </div>
 
       </div>
@@ -250,10 +242,7 @@
                       <div class="rightslid" onclick="plusSlides_he(1)">
                         &#10094;
                          
-                      </div>
-  
-  
-               
+                      </div> 
                 </div>
                 <br>
                 
@@ -274,7 +263,6 @@
     </div>
 
     <div class="offers list">
-      <img src="../img/svg/rightArrow.svg" alt="" class="navgo"/>
       <!-- ------ offer 1 ------ -->
       <div class="offer seritem">
         <span class="alert"> لم يتبقى الكثيرعلى العرض</span>
@@ -293,7 +281,8 @@
 
         <div class="options" id="group">
           <img src="../img/svg/star.svg" alt="" />
-          <img src="../img/svg/cartRed.svg" class="shop success" />
+          <!-- attToCart is for counter in js -->
+          <a href="#" class="cart_icon">  <img src="../img/svg/cartRed.svg" title="أضف للسلة" class="shop" /></a>
           <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
         </div>
           
@@ -315,7 +304,7 @@
         <p class="other"></p>
         <div class="options" id="group">
           <img src="../img/svg/star.svg" alt="" />
-          <img src="../img/svg/cartRed.svg" class="shop success" />
+          <img src="../img/svg/cartRed.svg" class="attToCart" />
           <img src="../img/svg/inverseDirectionArrows.svg" alt="" />
         </div>
          
@@ -625,10 +614,6 @@
         </div>
       </div>
       
-
-      <img src="../img/svg/rightArrow.svg"
-      style="transform: rotateY(180deg)"
-      alt="" class="navgo"/>
     </div>
    
   </div>
@@ -740,8 +725,9 @@
     </footer>
     <!-- footer section ends -->
 
-    <script src="../js/app.js"></script>
+    <!-- <script src="../js/app.js"></script> -->
     <script src="../js/slid.js"></script>
+    <script src="../js/basket.js"></script>
   </body>
 </html>
 

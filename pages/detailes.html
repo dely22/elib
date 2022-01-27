@@ -23,8 +23,8 @@
   </head>
   <body>
     <!-- header section starts  -->
-    <header class="header">
-      <nav class="navbar">
+    <header class="header" id="header">
+      <nav class="navbar" class="">
         <a
           href="#"
           onclick="document.getElementById('idlogin').style.display='block'"
@@ -50,20 +50,26 @@
         <a href="#"
           ><img src="../img/svg/svgexport-12.svg" class="nav_icon" /> اليمن YER
         </a>
-        <a href="#"
+        <a href="#" id='switch_lang' onclick="switchrow"
           >English<img src="../img/svg/svgexport-14.svg" class="nav_icon"
         /></a>
       </nav>
       <div class="lose">
         <a href="#" class="logo"><img src="../img/logo.PNG" alt="logo" /> </a>
+
         <form action="">
-          <input type="search" id="search-bar" placeholder="البحث" />
+          <input type="search" id="searchbar" placeholder="البحث" onkeyup="search_book()" />
           <label for="search-bar" class="fas fa-search"></label>
           <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
         </form>
-        <div class="icons">
-          <a href="#" class="fas fa-shopping-cart"></a>
-        </div>
+
+        <div class="iconShopping" id="">
+          <button type="button" class="icon-button">
+            <a href="checkout.html" class="fas fa-shopping-cart"></a>
+            <p id='cart-counter' class="icon-button__badge">0</p>
+            <!-- icon noto end -->
+          </div>
+
       </div>
     </header>
     <!-- header section ends -->
@@ -295,7 +301,15 @@
               <button> &hearts; المفضلة </button>
               <button> &hearts; مقارنة </button>
             </div>
+            <div class="shoop">
+              <div class="shar">
+                <button> &hearts; مشاركة</button>
+                <button> &hearts; المفضلة </button>
+                <button> &hearts; مقارنة </button>
+              </div>
+            </div>
           </div>
+         
         </div>
         <p class="descrip">
           كتاب يتحدث عن بعض أسماء الله الحسنى وكيف نعيشها في حياتنا , حرص المؤلف أن يكون الكتاب مناسبا لمن هم متوسطي الثقافة ويكون مناسبا للمحتاج والمريض والسليم 
@@ -433,27 +447,30 @@
     </footer>
     <!-- footer section ends -->
 
+    
     <script src="../js/slid.js"></script>
+    <script src="../js/langSwitch.js"></script>
+    <script src="../js/basket.js"></script>
     <script>
       function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("bookImgSlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = x.length;
-  }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" s-active", "");
-  }
-  x[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " s-active";
-}
+        var i;
+        var x = document.getElementsByClassName("bookImgSlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" s-active", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " s-active";
+      }
     </script>
   </body>
 </html>
