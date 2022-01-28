@@ -840,6 +840,11 @@ background-color: rgb(75, 191, 245);
   background-color: rgb(254, 255, 255);
   }
 @media (max-width:991px) {
+  .main{
+    position: relative;
+    top:40rem;
+    margin-bottom:42rem ;
+  }
   .header {
     position: absolute;
     top: 0;

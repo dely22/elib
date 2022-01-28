@@ -7,9 +7,9 @@
     <title>Cart | السلة</title>
     <!-- <link rel="stylesheet" href="../css/style.css" /> -->
     <link rel="stylesheet" href="../css/shobstyle.css" />
-    <link rel="stylesheet" href="../css/frame.css" />
 </head>
 <body>
+
     
     <section class="check">
         <div class="titel">
@@ -131,100 +131,17 @@
                     </div>
                 </div>
                 <p class="condtion">بالضغط على " انهاء التسوق " فأنت توافق على <a href="">الشروط والأحكام </a>و <a href="#">سياسة الخصوصية</a></p>
-                <button class="addbtn" onclick="document.getElementById('framstep').style.display='block';" > تحديث سلة التسوق </button>
+                <a href="stepper.html" class="addbtn" > تحديث سلة التسوق </a>
             </div>
         </div> 
         
     </section>
 
-   <div class="modal" id="framstep">
-    <div class="close-container">
-      <span
-        onclick="document.getElementById('framstep').style.display='none'"
-        class="close"
-        title=" أغلق الفورم"
-        >&times;</span
-      >
-    </div>
+  
 
-    <form action="#" class="form modal-content animate">
-      <h1 class="text-center">فورم الشراء </h1>
-      <!-- Progress bar -->
-      <div class="progressbar">
-        <div class="progress" id="progress"></div>
-        
-        <div
-          class="progress-step progress-step-active"
-          data-title="معلومات شخصية"
-        ></div>
-        <div class="progress-step" data-title="التواصل"></div>
-        <div class="progress-step" data-title="رقم التعريف"></div>
-        <div class="progress-step" data-title=" السرية"></div>
-      </div>
+<script src="../js/basket.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/langSwitch.js"></script>
 
-      <!-- Steps -->
-      <div class="form-step form-step-active">
-        <div class="input-group">
-          <label for="username">الاسم</label>
-          <input type="text" name="username" id="username" />
-        </div>
-        <div class="input-group">
-          <label for="position">العنوان</label>
-          <input type="text" name="position" id="position" />
-        </div>
-        <div class="">
-          <a href="#" class="btn btn-next width-50 ml-auto">التالي</a>
-        </div>
-      </div>
-      <div class="form-step">
-        <div class="input-group">
-          <label for="phone">رقم الجوال</label>
-          <input type="text" name="phone" id="phone" />
-        </div>
-        <div class="input-group">
-          <label for="email">الايميل</label>
-          <input type="text" name="email" id="email" />
-        </div>
-        <div class="btns-group">
-          <a href="#" class="btn btn-prev">السابق </a>
-          <a href="#" class="btn btn-next">التالي</a>
-        </div>
-      </div>
-      <div class="form-step">
-        <div class="input-group">
-          <label for="dob">تاريخ الميلاد</label>
-          <input type="date" name="dob" id="dob" />
-        </div>
-        <div class="input-group">
-          <label for="ID">رقم البطاقة </label>
-          <input type="number" name="ID" id="ID" />
-        </div>
-        <div class="btns-group">
-          <a href="#" class="btn btn-prev">السابق</a>
-          <a href="#" class="btn btn-next">التالي</a>
-        </div>
-      </div>
-      <div class="form-step">
-        <div class="input-group">
-          <label for="password">كلمة السر</label>
-          <input type="password" name="password" id="password" />
-        </div>
-        <div class="input-group">
-          <label for="confirmPassword"> كود التحقق</label>
-          <input
-            type="password"
-            name="confirmPassword"
-            id="confirmPassword"
-          />
-        </div>
-        <div class="btns-group">
-          <a href="#" class="btn btn-prev">السابق</a>
-          <input type="submit" value="دفع" class="btn" />
-        </div>
-      </div>
-    </form>
-   </div>
-
-<script src="../js/fram.js"></script>
 </body>
 </html>

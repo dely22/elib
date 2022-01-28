@@ -1,4 +1,12 @@
 /* slide */
+.hello-_-{
+    position: relative;
+    /* top: 6rem; */
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
 
 .mySlides {
     display: none
@@ -118,9 +126,4 @@
 
 .rightslid:hover, .leftslid:hover {
     color: blue;
-}
-@media (max-width:991px) {
-    .slideshow-container{
-        margin-top: 20%;
-    }
 }
